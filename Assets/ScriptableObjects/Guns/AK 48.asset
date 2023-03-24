@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136ea6016b371fd4aba4004be816a165, type: 3}
+  m_Name: AK 48
+  m_EditorClassIdentifier: 
+  name: AK 47
+  fireRate: 0.09
+  damage: 50
+  ammo: 120
+  burst: 1
+  pellete: 0
+  clipsize: 30
+  aimSpeed: 17
+  bloom: 15
+  reloadTime: 3
+  recoil_x: 1
+  recoil_y: 0.8
+  kickBack: 0.025
+  mainFOV: 0.8
+  weaponFOV: 0.62
+  gunShotSpund: {fileID: 8300000, guid: c5e15740ed73d93428b5d615ca9a98c9, type: 3}
+  pitchRandomizer: 0.05
+  volume: 0
+  recovery: 0
+  prefab: {fileID: 8395923193604119193, guid: 7d6dc4663296af84ba58a6255b52a208, type: 3}
