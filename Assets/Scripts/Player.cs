@@ -161,7 +161,15 @@ namespace Com.Kawaiisun.SimpleHostile
                 rb.AddForce(jumpForce * Vector3.up);
             }
 
-            if (Input.GetKeyDown(KeyCode.K)) TakeDamage(mannualDamage);
+            //mannual damage
+            if (Input.GetKeyDown(KeyCode.K)) TakeDamage(mannualDamage * 5);
+
+
+            //mannual heal secret cheat code
+            if(Input.GetKeyDown(KeyCode.F10))
+            {
+                currentHealth = maxHealth;
+            }
 
             //HeadBob
 

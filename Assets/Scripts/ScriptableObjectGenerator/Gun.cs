@@ -5,7 +5,7 @@ namespace Com.Kawaiisun.SimpleHostile
     [CreateAssetMenu(fileName = "New Gun", menuName = "Gun")]
     public class Gun : ScriptableObject
     {
-        public string name;
+        public string newname;
         public float fireRate;
         public int damage;
         public int ammo;

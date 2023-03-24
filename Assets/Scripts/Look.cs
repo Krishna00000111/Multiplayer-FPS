@@ -1,5 +1,6 @@
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Com.Kawaiisun.SimpleHostile
 {
@@ -14,6 +15,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public Transform weaponCam;
         public Transform weapon;
 
+        private SensitivitySlider senseSlider;
         public float xSensitivity;
         public float ySensitivity;
         public float maxAngle;
@@ -26,6 +28,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
         private void Start()
         {
+            senseSlider = FindObjectOfType<SensitivitySlider>();
             camCentre = normalCam.localRotation; // set rotation origin to cams to camCentre
         }
 
@@ -47,7 +50,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
         private void SetY()
         {
-            float t_input = Input.GetAxis("Mouse Y") * ySensitivity * Time.deltaTime;
+            float t_input = Input.GetAxis("Mouse Y") * senseSlider.sensitivity * ySensitivity* Time.deltaTime;
             Quaternion t_adjust = Quaternion.AngleAxis(t_input, -Vector3.right);
             Quaternion t_delta = normalCam.localRotation * t_adjust;
 
@@ -61,7 +64,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
         private void SetX()
         {
-            float t_input = Input.GetAxis("Mouse X") * xSensitivity * Time.deltaTime;
+            float t_input = Input.GetAxis("Mouse X") * senseSlider.sensitivity * xSensitivity * Time.deltaTime;
             Quaternion t_adjust = Quaternion.AngleAxis(t_input, Vector3.up);
             Quaternion t_delta = player.localRotation * t_adjust;
             player.localRotation = t_delta;

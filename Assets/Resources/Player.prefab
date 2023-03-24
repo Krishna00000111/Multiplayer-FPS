@@ -507,8 +507,8 @@ MonoBehaviour:
   normalCam: {fileID: 4084689831511908656}
   weaponCam: {fileID: 6320425471993718006}
   weapon: {fileID: 4084689832332506254}
-  xSensitivity: 180
-  ySensitivity: 180
+  xSensitivity: 360
+  ySensitivity: 360
   maxAngle: 45
 --- !u!114 &4084689832753989168
 MonoBehaviour:
